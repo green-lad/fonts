@@ -18,7 +18,7 @@
             self.packages.${system}; # Add font derivation names here
         };
 
-        packages.palatino = pkgs.stdenvNoCC.mkDerivation {
+        packages.astetica = pkgs.stdenvNoCC.mkDerivation {
           name = "astetica-font";
           dontConfigue = true;
           src = pkgs.fetchzip {
@@ -29,8 +29,9 @@
             stripRoot = false;
           };
           installPhase = ''
-            mkdir -p $out/share/fonts
-            cp -R $src/Palatino $out/share/fonts/truetype/
+            mkdir -p $out/share/fonts/truetype
+            cp $src/*.otf $out/share/fonts/truetype/
+            cp $src/*.ttf $out/share/fonts/truetype/
           '';
           meta = { description = "Derivation for the Astetica font."; };
         };
