@@ -6,5 +6,4 @@ To use it:
 (see my [nixos config](https://github.com/green-lad/nixos/blob/niri-wayland/flake.nix))
 
 # Fonts
-- https://www.1001fonts.com/astetica-font.html
-User for decoratively for stuff made with a CO2-Laser
+- [Astetica](https://www.1001fonts.com/astetica-font.html): User for decoratively for stuff made with a CO2-Laser
