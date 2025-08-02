@@ -7,3 +7,4 @@ To use it:
 
 # Fonts
 - [Astetica](https://www.1001fonts.com/astetica-font.html): User for decoratively stuff made with a CO2-Laser
+- [Leafery](https://www.fontspace.com/leafery-font-f77928): User for decoratively stuff made with a CO2-Laser
