@@ -34,37 +34,39 @@
       in
       {
         defaultPackage = pkgs.symlinkJoin {
-          name = "myfonts-0.1.1";
+          name = "myfonts-0.1.2";
           paths = builtins.attrValues self.packages.${system};
         };
 
-        packages.astetica = builtins.map (
-          v:
-          pkgs.stdenvNoCC.mkDerivation {
-            name = "${v.name}-font";
-            dontConfigue = true;
-            src = pkgs.fetchzip {
-              url = "${v.url}";
-              sha256 = "${v.sha256}";
-              stripRoot = false;
-            };
-            installPhase = ''
-              mkdir -p $out/share/fonts/truetype
-              echo $src
-              if stat -t $src/*.otf >/dev/null 2>&1; then
-                cp $src/*.otf $out/share/fonts/truetype/
-              fi
+        packages = builtins.listToAttrs (builtins.map (
+          v: {
+            name = "${v.name}";
+            value = pkgs.stdenvNoCC.mkDerivation {
+              name = "${v.name}-font";
+              dontConfigue = true;
+              src = pkgs.fetchzip {
+                url = "${v.url}";
+                sha256 = "${v.sha256}";
+                stripRoot = false;
+              };
+              installPhase = ''
+                mkdir -p $out/share/fonts/truetype
+                echo $src
+                if stat -t $src/*.otf >/dev/null 2>&1; then
+                  cp $src/*.otf $out/share/fonts/truetype/
+                fi
 
-              if stat -t $src/*.ttf >/dev/null 2>&1; then
-              # if compgen -G $src/*.ttf > /dev/null; then
-                cp $src/*.ttf $out/share/fonts/truetype/
-              fi
-            '';
-            meta = {
-              description = "Derivation for the ${v.name} font.";
+                if stat -t $src/*.ttf >/dev/null 2>&1; then
+                # if compgen -G $src/*.ttf > /dev/null; then
+                  cp $src/*.ttf $out/share/fonts/truetype/
+                fi
+              '';
+              meta = {
+                description = "Derivation for the ${v.name} font.";
+              };
             };
           }
-        ) fonts;
+        ) fonts );
       }
     );
 }
