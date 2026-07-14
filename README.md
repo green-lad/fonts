@@ -8,5 +8,6 @@ To use it:
 # Fonts
 ## Monoline cursive
 - [Astetica](https://www.1001fonts.com/astetica-font.html)
+- [Audley Ipswitch](https://www.fontspace.com/audley-ipswitch-font-f158237)
 - [Leafery](https://www.fontspace.com/leafery-font-f77928)
 - [Lovely Home](https://www.fontspace.com/lovely-home-font-f28321)
