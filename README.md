@@ -6,5 +6,7 @@ To use it:
 (see my [nixos config](https://github.com/green-lad/nixos/blob/niri-wayland/flake.nix))
 
 # Fonts
-- [Astetica](https://www.1001fonts.com/astetica-font.html): User for decoratively stuff made with a CO2-Laser
-- [Leafery](https://www.fontspace.com/leafery-font-f77928): User for decoratively stuff made with a CO2-Laser
+## Monoline cursive
+- [Astetica](https://www.1001fonts.com/astetica-font.html)
+- [Leafery](https://www.fontspace.com/leafery-font-f77928)
+- [Lovely Home](https://www.fontspace.com/lovely-home-font-f28321)

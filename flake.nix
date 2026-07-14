@@ -29,6 +29,11 @@
             url = "https://get.fontspace.co/download/family/7nexw/a056bf699c9d45f8b8bcd2bccd7f4137/leafery-font.zip";
             sha256 = "0fjhwhjii1vv4dgvw57xgvb7p5j1qnhzjs18dy10mj1mjqld8fj2";
           }
+          {
+            name = "lovely-home";
+            url = "https://get.fontspace.co/download/family/33ele/90e10d76e8b8432eabb397ed5f3c1914/lovely-home-font.zip";
+            sha256 = "0f64r5n7j2nv7kv43wapmc9ibpjlpnmxxa3fmjflgfzfmypa3nnp";
+          }
         ];
         pkgs = nixpkgs.legacyPackages.${system};
       in
